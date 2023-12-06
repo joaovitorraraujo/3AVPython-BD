@@ -1,4 +1,4 @@
-# tkiner e ctk
+# tkinter e ctk
 import tkinter as tk
 from tkinter import ttk
 import customtkinter as ctk
@@ -1375,14 +1375,38 @@ class MyApp(ctk.CTk):
                     # atualizar porcentagem
                     valor_porcentagem = porcentagem_value(user_id)[0]
                     l_bar.configure(text="{:,.2f}%".format(valor_porcentagem))
-                    bar.set(valor_porcentagem)
+                    bar_set = valor_porcentagem
+            
+                    if valor_porcentagem > 0 and valor_porcentagem <= 10:
+                        bar_set = 0.1
+                    elif valor_porcentagem >= 11 and valor_porcentagem <= 20:
+                        bar_set = 0.2
+                    elif valor_porcentagem >= 21 and valor_porcentagem <= 30:
+                        bar_set = 0.3
+                    elif valor_porcentagem >= 31 and valor_porcentagem <= 40:
+                        bar_set = 0.4
+                    elif valor_porcentagem >= 41 and valor_porcentagem <= 50:
+                        bar_set = 0.5
+                    elif valor_porcentagem >= 51 and valor_porcentagem <= 60:
+                        bar_set = 0.6
+                    elif valor_porcentagem >= 61 and valor_porcentagem <= 70:
+                        bar_set = 0.7
+                    elif valor_porcentagem >= 71 and valor_porcentagem <= 80:
+                        bar_set = 0.8
+                    elif valor_porcentagem >= 81 and valor_porcentagem <= 90:
+                        bar_set = 0.9
+                    elif valor_porcentagem >= 91 and valor_porcentagem <= 100:
+                        bar_set = 1
+                    else:
+                        bar_set = 0
+                    bar.set(bar_set)
                     grafico_bar()
                     grafico_pie()
                     mostrar_renda()
                 else:
                     CTkMessagebox(title="Error", message="Preencha todos os campos", icon="cancel")
             else:
-                CTkMessagebox(title="Error", message="O campo de valor deve ser preenchido corretamente\nExemplo: 0.00", icon="cancel")
+                CTkMessagebox(title="Error", message="O campo de valor deve ser preenchido corretamente\nCantavos devem ser com '.'(ponto)\nExemplo: 0.00", icon="cancel")
                 
         def inserir_despesas():
             nome = combo_categoria.get()
@@ -1403,14 +1427,38 @@ class MyApp(ctk.CTk):
                     # atualizar porcentagem
                     valor_porcentagem = porcentagem_value(user_id)[0]
                     l_bar.configure(text="{:,.2f}%".format(valor_porcentagem))
-                    bar.set(valor_porcentagem)
+                    bar_set = valor_porcentagem
+            
+                    if valor_porcentagem > 0 and valor_porcentagem <= 10:
+                        bar_set = 0.1
+                    elif valor_porcentagem >= 11 and valor_porcentagem <= 20:
+                        bar_set = 0.2
+                    elif valor_porcentagem >= 21 and valor_porcentagem <= 30:
+                        bar_set = 0.3
+                    elif valor_porcentagem >= 31 and valor_porcentagem <= 40:
+                        bar_set = 0.4
+                    elif valor_porcentagem >= 41 and valor_porcentagem <= 50:
+                        bar_set = 0.5
+                    elif valor_porcentagem >= 51 and valor_porcentagem <= 60:
+                        bar_set = 0.6
+                    elif valor_porcentagem >= 61 and valor_porcentagem <= 70:
+                        bar_set = 0.7
+                    elif valor_porcentagem >= 71 and valor_porcentagem <= 80:
+                        bar_set = 0.8
+                    elif valor_porcentagem >= 81 and valor_porcentagem <= 90:
+                        bar_set = 0.9
+                    elif valor_porcentagem >= 91 and valor_porcentagem <= 100:
+                        bar_set = 1
+                    else:
+                        bar_set = 0
+                    bar.set(bar_set)
                     grafico_bar()
                     grafico_pie()
                     mostrar_renda()
                 else:
                     CTkMessagebox(title="Error", message="Preencha todos os campos", icon="cancel")
             else:
-                CTkMessagebox(title="Error", message="O campo de valor deve ser preenchido corretamente\nExemplo: 0.00", icon="cancel")
+                CTkMessagebox(title="Error", message="O campo de valor deve ser preenchido corretamente\nCantavos devem ser com '.'(ponto)\nExemplo: 0.00", icon="cancel")
         
         def delete_dados_table():
             try:
@@ -1433,7 +1481,31 @@ class MyApp(ctk.CTk):
                     # atualizar porcentagem
                     valor_porcentagem = porcentagem_value(user_id)[0]
                     l_bar.configure(text="{:,.2f}%".format(valor_porcentagem))
-                    bar.set(valor_porcentagem)
+                    bar_set = valor_porcentagem
+            
+                    if valor_porcentagem > 0 and valor_porcentagem <= 10:
+                        bar_set = 0.1
+                    elif valor_porcentagem >= 11 and valor_porcentagem <= 20:
+                        bar_set = 0.2
+                    elif valor_porcentagem >= 21 and valor_porcentagem <= 30:
+                        bar_set = 0.3
+                    elif valor_porcentagem >= 31 and valor_porcentagem <= 40:
+                        bar_set = 0.4
+                    elif valor_porcentagem >= 41 and valor_porcentagem <= 50:
+                        bar_set = 0.5
+                    elif valor_porcentagem >= 51 and valor_porcentagem <= 60:
+                        bar_set = 0.6
+                    elif valor_porcentagem >= 61 and valor_porcentagem <= 70:
+                        bar_set = 0.7
+                    elif valor_porcentagem >= 71 and valor_porcentagem <= 80:
+                        bar_set = 0.8
+                    elif valor_porcentagem >= 81 and valor_porcentagem <= 90:
+                        bar_set = 0.9
+                    elif valor_porcentagem >= 91 and valor_porcentagem <= 100:
+                        bar_set = 1
+                    else:
+                        bar_set = 0
+                    bar.set(bar_set)
                     grafico_bar()
                     grafico_pie()
                     mostrar_renda()
@@ -1451,7 +1523,31 @@ class MyApp(ctk.CTk):
                     # atualizar porcentagem
                     valor_porcentagem = porcentagem_value(user_id)[0]
                     l_bar.configure(text="{:,.2f}%".format(valor_porcentagem))
-                    bar.set(valor_porcentagem)
+                    bar_set = valor_porcentagem
+            
+                    if valor_porcentagem > 0 and valor_porcentagem <= 10:
+                        bar_set = 0.1
+                    elif valor_porcentagem >= 11 and valor_porcentagem <= 20:
+                        bar_set = 0.2
+                    elif valor_porcentagem >= 21 and valor_porcentagem <= 30:
+                        bar_set = 0.3
+                    elif valor_porcentagem >= 31 and valor_porcentagem <= 40:
+                        bar_set = 0.4
+                    elif valor_porcentagem >= 41 and valor_porcentagem <= 50:
+                        bar_set = 0.5
+                    elif valor_porcentagem >= 51 and valor_porcentagem <= 60:
+                        bar_set = 0.6
+                    elif valor_porcentagem >= 61 and valor_porcentagem <= 70:
+                        bar_set = 0.7
+                    elif valor_porcentagem >= 71 and valor_porcentagem <= 80:
+                        bar_set = 0.8
+                    elif valor_porcentagem >= 81 and valor_porcentagem <= 90:
+                        bar_set = 0.9
+                    elif valor_porcentagem >= 91 and valor_porcentagem <= 100:
+                        bar_set = 1
+                    else:
+                        bar_set = 0
+                    bar.set(bar_set)
                     grafico_bar()
                     grafico_pie()
                     mostrar_renda()
@@ -1479,7 +1575,31 @@ class MyApp(ctk.CTk):
             )
             l_porcentagem.place(x=20,y=15)
 
-            valor = porcentagem_value(user_id)[0]  
+            valor = porcentagem_value(user_id)[0]                
+            bar_set = valor
+            
+            if valor > 0 and valor <= 10:
+                bar_set = 0.1
+            elif valor >= 11 and valor <= 20:
+                bar_set = 0.2
+            elif valor >= 21 and valor <= 30:
+                bar_set = 0.3
+            elif valor >= 31 and valor <= 40:
+                bar_set = 0.4
+            elif valor >= 41 and valor <= 50:
+                bar_set = 0.5
+            elif valor >= 51 and valor <= 60:
+                bar_set = 0.6
+            elif valor >= 61 and valor <= 70:
+                bar_set = 0.7
+            elif valor >= 71 and valor <= 80:
+                bar_set = 0.8
+            elif valor >= 81 and valor <= 90:
+                bar_set = 0.9
+            elif valor >= 91 and valor <= 100:
+                bar_set = 1
+            else:
+                bar_set = 0
             
             l_bar = ctk.CTkLabel(
                 master=frame_meio_grafico,
@@ -1501,7 +1621,7 @@ class MyApp(ctk.CTk):
 
             )
             bar.place(x=20,y=42)
-            bar.set(valor)
+            bar.set(bar_set)
         #grafico matplotlib 
         def grafico_bar():
             
@@ -1802,9 +1922,6 @@ class MyApp(ctk.CTk):
         
             
         combo_categoria.bind("<KeyRelease>", update_combobox_values)
-        
-    
-            
         
         #data
         l_calendar_data = ctk.CTkLabel(
