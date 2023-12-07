@@ -309,7 +309,7 @@ class MyApp(ctk.CTk):
                 text="Sua senha: *****",
                 font=('Arial 20',17))
             
-            l_password.place(x=90, y=310)
+            l_password.place(x=50, y=310)
             
             def back_login():
                     move_frame_in(455, frame_forgot_password, -320)                                        
