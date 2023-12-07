@@ -34,6 +34,7 @@ pip install -r requirements.txt
 - Realize Login
 - Cadastre Usuários
 - Atualize sua conta conforme necessário
+- pesquise por categorias na barra de categorias
 
 <h2 align="center"> Aplicativo em execução </h2>
 [Assista ao vídeo](https://www.youtube.com/watch?v=o5IKUkNy9Fk)
